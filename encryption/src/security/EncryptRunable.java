@@ -12,7 +12,7 @@ public class EncryptRunable implements Runnable {
      */
     private boolean flag;
 
-    private EncryptRunable(String algorithm, byte[] data, boolean flag){
+    public EncryptRunable(String algorithm, byte[] data, boolean flag){
         this.algorithm = algorithm;
         this.data = data;
         this.flag = flag;
