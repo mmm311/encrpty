@@ -1,12 +1,18 @@
 package security;
 
+/**
+ * @author liu
+ */
 public class EncryptRunable implements Runnable {
-    String algorithm = null;
-    byte[] data = null;
-    // true ：运行加密算法， false: 运行hash算法
-    boolean flag;
+    private String algorithm = null;
+    private byte[] data = null;
 
-    public EncryptRunable(String algorithm, byte[] data, boolean flag){
+    /**
+     * flag == true:运行加密算法, flag == fasle: 运行hash算法
+     */
+    private boolean flag;
+
+    private EncryptRunable(String algorithm, byte[] data, boolean flag){
         this.algorithm = algorithm;
         this.data = data;
         this.flag = flag;
